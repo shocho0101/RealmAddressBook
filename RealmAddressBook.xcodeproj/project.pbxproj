@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CAAADF0E2478334A0010B85B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF0D2478334A0010B85B /* AppDelegate.swift */; };
 		CAAADF102478334A0010B85B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF0F2478334A0010B85B /* SceneDelegate.swift */; };
-		CAAADF122478334A0010B85B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF112478334A0010B85B /* ViewController.swift */; };
-		CAAADF152478334A0010B85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF132478334A0010B85B /* Main.storyboard */; };
 		CAAADF172478334B0010B85B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF162478334B0010B85B /* Assets.xcassets */; };
 		CAAADF1A2478334B0010B85B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF182478334B0010B85B /* LaunchScreen.storyboard */; };
+		CAAADF2A2478378A0010B85B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF262478378A0010B85B /* AddViewController.swift */; };
+		CAAADF2C2478378A0010B85B /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF282478378A0010B85B /* AddressListTableViewCell.swift */; };
+		CAAADF2D2478378A0010B85B /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF292478378A0010B85B /* AddressListViewController.swift */; };
+		CAAADF2F247837970010B85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF2E247837970010B85B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAAADF0A2478334A0010B85B /* RealmAddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmAddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAAADF0D2478334A0010B85B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAAADF0F2478334A0010B85B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CAAADF112478334A0010B85B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CAAADF142478334A0010B85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAAADF162478334B0010B85B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAAADF192478334B0010B85B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAAADF1B2478334B0010B85B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAAADF262478378A0010B85B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		CAAADF282478378A0010B85B /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
+		CAAADF292478378A0010B85B /* AddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
+		CAAADF2E247837970010B85B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				CAAADF0D2478334A0010B85B /* AppDelegate.swift */,
 				CAAADF0F2478334A0010B85B /* SceneDelegate.swift */,
-				CAAADF112478334A0010B85B /* ViewController.swift */,
-				CAAADF132478334A0010B85B /* Main.storyboard */,
+				CAAADF282478378A0010B85B /* AddressListTableViewCell.swift */,
+				CAAADF292478378A0010B85B /* AddressListViewController.swift */,
+				CAAADF262478378A0010B85B /* AddViewController.swift */,
+				CAAADF2E247837970010B85B /* Main.storyboard */,
 				CAAADF162478334B0010B85B /* Assets.xcassets */,
 				CAAADF182478334B0010B85B /* LaunchScreen.storyboard */,
 				CAAADF1B2478334B0010B85B /* Info.plist */,
@@ -83,6 +89,8 @@
 			dependencies = (
 			);
 			name = RealmAddressBook;
+			packageProductDependencies = (
+			);
 			productName = RealmAddressBook;
 			productReference = CAAADF0A2478334A0010B85B /* RealmAddressBook.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,8 @@
 				Base,
 			);
 			mainGroup = CAAADF012478334A0010B85B;
+			packageReferences = (
+			);
 			productRefGroup = CAAADF0B2478334A0010B85B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +137,7 @@
 			files = (
 				CAAADF1A2478334B0010B85B /* LaunchScreen.storyboard in Resources */,
 				CAAADF172478334B0010B85B /* Assets.xcassets in Resources */,
-				CAAADF152478334A0010B85B /* Main.storyboard in Resources */,
+				CAAADF2F247837970010B85B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAAADF122478334A0010B85B /* ViewController.swift in Sources */,
+				CAAADF2C2478378A0010B85B /* AddressListTableViewCell.swift in Sources */,
 				CAAADF0E2478334A0010B85B /* AppDelegate.swift in Sources */,
+				CAAADF2A2478378A0010B85B /* AddViewController.swift in Sources */,
+				CAAADF2D2478378A0010B85B /* AddressListViewController.swift in Sources */,
 				CAAADF102478334A0010B85B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +159,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CAAADF132478334A0010B85B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAAADF142478334A0010B85B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CAAADF182478334B0010B85B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
