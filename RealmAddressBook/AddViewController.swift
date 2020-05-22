@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 class AddViewController: UIViewController {
@@ -16,13 +17,25 @@ class AddViewController: UIViewController {
     @IBOutlet var ageTextField: UITextField!
     @IBOutlet var phoneNumberTextField: UITextField!
 
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     @IBAction func addAddress() {
+        let newAddress = Address()
+        newAddress.name = nameTextField.text!
+        newAddress.kana = kanaTextField.text!
+        newAddress.age = Int(ageTextField.text!)!
+        newAddress.phoneNumber = phoneNumberTextField.text!
         
+        try! realm.write {
+            realm.add(newAddress)
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancel() {

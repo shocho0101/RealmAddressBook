@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		CAAADF2C2478378A0010B85B /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF282478378A0010B85B /* AddressListTableViewCell.swift */; };
 		CAAADF2D2478378A0010B85B /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF292478378A0010B85B /* AddressListViewController.swift */; };
 		CAAADF2F247837970010B85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAAADF2E247837970010B85B /* Main.storyboard */; };
+		CAAADF3224783D120010B85B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = CAAADF3124783D120010B85B /* Realm */; };
+		CAAADF3424783D120010B85B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CAAADF3324783D120010B85B /* RealmSwift */; };
+		CAAADF3624783D8B0010B85B /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAADF3524783D8B0010B85B /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,7 @@
 		CAAADF282478378A0010B85B /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
 		CAAADF292478378A0010B85B /* AddressListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		CAAADF2E247837970010B85B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CAAADF3524783D8B0010B85B /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAADF3424783D120010B85B /* RealmSwift in Frameworks */,
+				CAAADF3224783D120010B85B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,7 @@
 				CAAADF162478334B0010B85B /* Assets.xcassets */,
 				CAAADF182478334B0010B85B /* LaunchScreen.storyboard */,
 				CAAADF1B2478334B0010B85B /* Info.plist */,
+				CAAADF3524783D8B0010B85B /* Address.swift */,
 			);
 			path = RealmAddressBook;
 			sourceTree = "<group>";
@@ -90,6 +97,8 @@
 			);
 			name = RealmAddressBook;
 			packageProductDependencies = (
+				CAAADF3124783D120010B85B /* Realm */,
+				CAAADF3324783D120010B85B /* RealmSwift */,
 			);
 			productName = RealmAddressBook;
 			productReference = CAAADF0A2478334A0010B85B /* RealmAddressBook.app */;
@@ -120,6 +129,7 @@
 			);
 			mainGroup = CAAADF012478334A0010B85B;
 			packageReferences = (
+				CAAADF3024783D120010B85B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = CAAADF0B2478334A0010B85B /* Products */;
 			projectDirPath = "";
@@ -148,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAAADF3624783D8B0010B85B /* Address.swift in Sources */,
 				CAAADF2C2478378A0010B85B /* AddressListTableViewCell.swift in Sources */,
 				CAAADF0E2478334A0010B85B /* AppDelegate.swift in Sources */,
 				CAAADF2A2478378A0010B85B /* AddViewController.swift in Sources */,
@@ -342,6 +353,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CAAADF3024783D120010B85B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CAAADF3124783D120010B85B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAAADF3024783D120010B85B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		CAAADF3324783D120010B85B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAAADF3024783D120010B85B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CAAADF022478334A0010B85B /* Project object */;
 }

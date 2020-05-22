@@ -7,13 +7,16 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 
 class AddressListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tableView: UITableView!
 
+    let realm = try! Realm()
+    let addresses = try! Realm().objects(Address.self).sorted(byKeyPath: "kana")
+    var notificationToken: NotificationToken?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +24,24 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
+        notificationToken = addresses.observe { [weak self] _ in
+            self?.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return addresses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AddressListTableViewCell
+        cell.nameLabel.text = addresses[indexPath.row].name
+        cell.kanaLabel.text = addresses[indexPath.row].kana
+        cell.ageLabel.text = String(addresses[indexPath.row].age)
+        cell.phoneNumberLabel.text = addresses[indexPath.row].phoneNumber
+        return cell
     }
 }
+
+
 
